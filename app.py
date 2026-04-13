@@ -56,7 +56,7 @@ def configurar_agente():
     vectorstore = Chroma.from_texts(texts=textos_combinados, embedding=embeddings)
     
     # D. Configuração do LLM (Gemini 2.5 Flash)
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", temperature=0.1)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", temperature=0.1)
     
     return vectorstore, llm
 
