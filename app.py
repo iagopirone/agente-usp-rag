@@ -59,7 +59,7 @@ def configurar_agente():
     llm = ChatGoogleGenerativeAI(llm = ChatGoogleGenerativeAI(
     model="models/gemini-1.5-flash", # Nome completo oficial
     version="v1",                   # Força a versão estável
-    temperature=0.1)
+    temperature=0.1))
     
     return vectorstore, llm
 
