@@ -55,9 +55,8 @@ def configurar_agente():
     # Armazena os textos e permite busca por similaridade semântica.
     vectorstore = Chroma.from_texts(texts=textos_combinados, embedding=embeddings)
     
-    # D. Configuração do LLM     
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", version="v1", temperature=0.1)
-    
+    # D. Configuração do LLM   
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.1)    
     return vectorstore, llm
 
 # Inicialização do Sistema
